@@ -10,42 +10,30 @@ The data used in this project is provided under the CC0 1.0 Universal (Public Do
 The project workflow involves cleaning the data, organizing it into a MySQL database, and performing preliminary data exploration.
 
 ## Workflow
-### 0. **Extract data from data.zip**
+### 0. **Extract all from data.zip to a new folder data**
 
-### 1. **Examine CSV Files**
-- **Task:** Review and clean the provided CSV files.
-- **Steps:**
+### 1. **Review and clean CSV Files**
+- Execute the python script `divide_aggregate_trash.py`
   - Remove all "Total" values to avoid aggregation conflicts.
   - Split `aggregate_trash.csv` into two files: `import_trash.csv` and `export_trash.csv`. These files contain waste trade values in tonnes and thousands of euros, categorized by material, partner country, EU country, and year.
-- **Script:** `divide_aggregate_trash.py`
 
 ### 2. **Create Database and Tables**
-- **Task:** Set up a MySQL database to store and organize the data.
-- **Steps:**
-  - Execute the SQL script `create_eu_waste_trade_db.sql` to create the database structure and tables.
+- Execute the SQL script `create_eu_waste_trade_db.sql` to create the database structure and tables.
 
 ### 3. **Import Data**
-- **Task:** Load the cleaned data into the MySQL database.
-- **Steps:**
-  - Place the following CSV files in the directory defined by the `secure-file-priv` variable in MySQL:
-    - `geo_labels.csv`
-    - `material_labels.csv`
-    - `partner_labels.csv`
-    - `import_trash.csv`
-    - `export_trash.csv`
-  - Execute the script `import_data_to_eu_waste_trade_db.sql` to import the data into the corresponding tables.
+- Place the following CSV files in the directory defined by the `secure-file-priv` variable in MySQL:
+  - `geo_labels.csv`
+  - `material_labels.csv`
+  - `partner_labels.csv`
+  - `import_trash.csv`
+  - `export_trash.csv`
+- Execute the script `import_data_to_eu_waste_trade_db.sql` to import the data into the corresponding tables.
 
 ### 4. **Check Data**
-- **Task:** Verify the accuracy of the imported data.
-- **Steps:**
-  - Manually compare selected values by countries, years in the MySQL database against the original data on [Eurostat data](https://ec.europa.eu/eurostat/databrowser/view/ENV_WASTRDMP__custom_6104729/).
+- Manually compare selected values by countries, years in the MySQL database against the original data on [Eurostat data](https://ec.europa.eu/eurostat/databrowser/view/ENV_WASTRDMP__custom_6104729/).
 
 ### 5. **Optimize Tables**
-- **Task:** Improve database performance by creating indexes.
-- **Steps:**
-  - Execute the script `alter_eu_waste_trade_db.sql` to add indexes to the database tables.
+- Execute the script `alter_eu_waste_trade_db.sql` to add indexes to the database tables.
 
 ### 6. **Analyze Data**
-- **Task:** Perform basic queries to extract insights from the data.
-- **Steps:**
-  - Execute the script `select_eu_waste_trade_db.sql` to compute key metrics.
+- Execute the script `select_eu_waste_trade_db.sql` to compute key metrics.
