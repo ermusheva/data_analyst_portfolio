@@ -1,12 +1,17 @@
+
+
+
+
 # EU Waste Trade Analysis (2004–2021)
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
 
-<p align="right">
-  <img src="assets/waste_trade_img.jpg" alt="Waste Trade" width="200" style="margin-left: 20px;">
-</p>
 
 ## Project Description
+
+<p align="right">
+  <img src="assets/waste_trade_img.jpg" alt="Waste Trade" width="350" align="right"  style="margin-left: 0px;">
+</p>
 
 This project analyzes the trade of waste the European Union with non-EU countries from 2004 to 2021. The analysis includes waste import and export data measured in tonnes and thousands of euros. Data source is [Kaggle dataset from Original Eurostat data](https://www.kaggle.com/datasets/konradb/european-waste-export-2004-2020/data?select=aggregate_trash.csv).
 
@@ -72,7 +77,7 @@ The project workflow involves cleaning the data with Python, organizing it into 
   
 </details>
 
-## Results and Insights
+## Results
 ### 1. Total Export and Import Waste Trade of EU with Non-EU Countries (2004–2021)
 - **Description:** Total tonnes of waste exported and imported each year.
 - **Query File:** [tbd.sql](tbd)
