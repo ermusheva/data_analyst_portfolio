@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import squarify
 
-def add_legend(ax, labels, values, colors, title='', loc="upper left", bbox_to_anchor=(1, 1)):
+def add_legend(ax, labels, values, percents, colors, title='', loc="upper left", bbox_to_anchor=(1, 1)):
     """
     Adds a legend to the given axis with labels, values, and colors.
 
@@ -11,13 +11,15 @@ def add_legend(ax, labels, values, colors, title='', loc="upper left", bbox_to_a
     - ax: The axis object where the legend will be added.
     - labels: List of category labels.
     - values: List of corresponding values for the categories.
+    - percents: List of corresponding percents for the categories.
+    ! now without percents
     - colors: List of colors used in the treemap.
     - title: Title of the legend (default is "Legend (with values)").
     - loc: Location of the legend (default is "upper left").
     - bbox_to_anchor: Positioning of the legend relative to the plot (default is (1, 1)).
     """
     # Format labels to include values
-    legend_labels = [f"{label}\n{value}" for label, value in zip(labels, values)]
+    legend_labels = [f"{label}\n{value}" for label, value, percent in zip(labels, values, percents)]
     
     # Create marker patches for the legend
     legend_patches = [
@@ -57,9 +59,11 @@ plt.axis('off')
 ax.set_title('Total export of the European Union in 2021 by materials, Tonnes')
 add_legend(ax, 
            eu_export_2021['material_label'], 
-           eu_export_2021['tonne'], 
+           eu_export_2021['tonne'],
+           eu_export_2021['percent_of_year_total'],
            colors, 
-           loc='best')
+           loc='upper right', 
+           bbox_to_anchor = (0, 1))
 
 plt.tight_layout()
 plt.savefig('..//assets//eu_export_2021_by_materials.png', dpi=300)
