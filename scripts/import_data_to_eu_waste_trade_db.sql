@@ -11,12 +11,14 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
+
 load data infile 'c:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\material_labels.csv'
 into table material_labels
 FIELDS TERMINATED BY ',' 
 ENCLOSED BY '"' 
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
 
 load data infile 'c:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\partner_labels.csv'
 into table partner_labels
@@ -25,6 +27,8 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
+
+truncate table waste_export;
 load data infile 'c:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\export_trash.csv'
 into table waste_export
 FIELDS TERMINATED BY ',' 
@@ -32,6 +36,7 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
+truncate table waste_import;
 load data infile 'c:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\import_trash.csv'
 into table waste_import
 FIELDS TERMINATED BY ',' 

@@ -21,3 +21,4 @@ alter table waste_export
 alter table waste_export
 	add index (material_code, time_period);
 
+
