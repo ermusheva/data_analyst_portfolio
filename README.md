@@ -135,6 +135,29 @@ In 2021, metal waste accounted for an impressive 65.51% of the total weight of t
 
 <br><br>
 
+### 3. Top 10 waste export non-EU partners of the EU 
+
+[Flourish bar chat race](https://public.flourish.studio/resources/embed.js)
+<img src="https://public.flourish.studio/visualisation/20578175/thumbnail" alt="bar-chart-race visualization" width="70%" align="right"  style="margin-left: 0px;"/>
+
+From 2004 to 2021, the dynamics of the European Union’s waste trade with non-EU partners experienced notable shifts:
+
+- **China's Role as a Leader (2004–2017)**:
+For over a decade, China was the EU's leading waste trade partner. In 2017, it purchased waste worth €3.13 billion, maintaining its top position. However, starting in 2018, China's import volumes declined significantly due to stricter import regulations. By 2021, China dropped to fourth place, overtaken by Turkey, the United Kingdom, and India.
+
+- **Turkey's Ascension (2018–2021):**
+By 2018, Turkey became the largest buyer of EU waste, with imports reaching a peak of €5.06 billion in 2021. This marked Turkey's growing importance in EU waste trade.
+
+- **United States as a Stable Partner:**
+Over the 17 years, the USA consistently remained one of the most valuable non-EU trade partners, with imports steadily increasing to €1.50 billion in 2021.
+
+- **Top Non-EU European Partners:**
+Among non-EU European countries, the United Kingdom, Switzerland, and Norway have been the EU's primary waste trade partners, maintaining strong trade relationships throughout the period.
+
+**SQL Query:** [proc_top_n_export_partners_of_country_by_years.sql](scripts/proc_top_n_export_partners_of_country_by_years.sql)
+
+<br><br>
+
 ## Useful Links
 - [Project Repository](https://github.com/ermusheva/eu_waste_trade)
 - [Download the Dataset](https://www.kaggle.com/datasets/konradb/european-waste-export-2004-2020/data)
