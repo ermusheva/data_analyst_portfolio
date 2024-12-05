@@ -137,7 +137,7 @@ In 2021, metal waste accounted for an impressive 65.51% of the total weight of t
 
 ### 3. Top 10 waste export non-EU partners of the EU 
 
-[Flourish bar chat race](https://public.flourish.studio/resources/embed.js)
+[Flourish bar chat race](https://public.flourish.studio/visualisation/20578175/)
 <img src="https://public.flourish.studio/visualisation/20578175/thumbnail" alt="bar-chart-race visualization" width="70%" align="right"  style="margin-left: 0px;"/>
 
 From 2004 to 2021, the dynamics of the European Union’s waste trade with non-EU partners experienced notable shifts:
