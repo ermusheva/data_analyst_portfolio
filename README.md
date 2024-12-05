@@ -2,22 +2,27 @@
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
 
+<p align="right">
+  <img src="assets/waste_trade_img.jpg" alt="Waste Trade" width="200" style="margin-left: 20px;">
+</p>
+
 ## Project Description
+
 This project analyzes the trade of waste the European Union with non-EU countries from 2004 to 2021. The analysis includes waste import and export data measured in tonnes and thousands of euros. Data source is [Kaggle dataset from Original Eurostat data](https://www.kaggle.com/datasets/konradb/european-waste-export-2004-2020/data?select=aggregate_trash.csv).
 
 The data used in this project is provided under the CC0 1.0 Universal (Public Domain Dedication) license. This means the data is free to use, share, and adapt without restriction. 
 
-The project workflow involves cleaning the data with python, organizing it into a MySQL database, performing preliminary data exploration, .
-
+The project workflow involves cleaning the data with Python, organizing it into a MySQL database, performing preliminary data exploration, and visualization in Python and Flourish.
 
 <details>
   <summary>Click to view workflow</summary>
 
+
 ## Workflow
-### 0. **Extract all from data.zip to a new folder 'data'**
+### 0. **Extract all from data.zip to a new folder \data**
 
 ### 1. **Review and clean CSV Files**
-- Execute the python script `divide_aggregate_trash.py`
+- Execute the Python script `divide_aggregate_trash.py`
   - Remove trades of materials and partners subcategories to avoid aggregation conflicts.
   - Split `aggregate_trash.csv` into two files: `import_trash.csv` and `export_trash.csv`.
   - Pivot original data to reduce number of trade raws. Final files contain waste trade values in tonnes and thousands of euros, categorized by material, partner country, EU country, and year.
@@ -41,7 +46,29 @@ The project workflow involves cleaning the data with python, organizing it into 
 - Execute the script `alter_eu_waste_trade_db.sql` to add indexes to the database tables.
 
 ### 6. **Analyze Data**
-- Execute the script `select_eu_waste_trade_db.sql` to compute key metrics.
+- Execute scripts to compute key metrics:
+  - `view_eu_export_import_by_years.sql`
+  - `view_eu_export_by_years_materials.sql`
+  - `proc_top_n_export_partners_of_country_by_years.sql`
+
+
+### 7. **Export Data**
+- Export data to csv-files with the help of MySQL Workbench and place them in \results folder.
+  - `eu_export_import_by_years.csv`
+  - `eu_export_by_years_materials.csv`
+  - `top_10_export_partners_by_years.csv`
+
+### 8. **Visualize Data in Python**
+- Execute Python scripts to visualize data and save results:
+  - `visual_eu_export_import_by_years.py`
+  - `visual_eu_export_by_years_materials.py`
+  - `pivot_top_10_export_partners_by_years.py`
+    
+### 9. **Visualize in Flourish**
+- Add to data `eu_top_10_export_partners.csv` image urls of country flags from Flourich with the help of Google Sheets.
+- Load data to Flourish.
+- Set animation parameters in Flourish.
+
   
 </details>
 
@@ -55,20 +82,7 @@ The project workflow involves cleaning the data with python, organizing it into 
 | ----------- | ------------ | --------------------- | ------------ | --------------------- |
 | 2004 | 18655562 | 5039013.6 | 17708518 | 5579673.9 |
 | 2005 | 18832230 | 6010143.7 | 17354622 | 5862903.7 |
-| 2006 | 19692837 | 8166535.6 | 18041614 | 9276452.5 |
-| 2007 | 21328843 | 9524820.4 | 16993218 | 10403432.8 |
-| 2008 | 24377567 | 10001894.8 | 16703767 | 10077037.9 |
-| 2009 | 29778786 | 8797932.1 | 15156227 | 5747534.2 |
-| 2010 | 30209184 | 13192256.9 | 17695080 | 9529343.2 |
-| 2011 | 31184664 | 15710445.5 | 18414289 | 11845246.4 |
-| 2012 | 31934020 | 15653122.2 | 14776790 | 11018539.8 |
-| 2013 | 27807551 | 12322876.1 | 14937692 | 10161340.8 |
-| 2014 | 28389290 | 11724045.5 | 15305226 | 9504259.2 |
-| 2015 | 25718417 | 10380729.7 | 15492087 | 9103496.1 |
-| 2016 | 29231567 | 9995842.4 | 17106115 | 8934971.5 |
-| 2017 | 30995793 | 12425160.7 | 19060531 | 9698732.2 |
-| 2018 | 30940770 | 13103782 | 17121800 | 12145856.7 |
-| 2019 | 30905938 | 13389584.7 | 16758875 | 12847212.8 |
+...
 | 2020 | 32807186 | 12961870.8 | 16008408 | 13467221.3 |
 | 2021 | 32983442 | 20014174.6 | 19746409 | 19011603.7 |
 
