@@ -7,7 +7,7 @@ from matplotlib.ticker import FuncFormatter
 total_eu_export_import = pd.read_csv('..//results//eu_export_import_by_years.csv')
 
 # Set up the figure and axis
-fig, ax = plt.subplots(figsize=(16, 9))
+fig, ax = plt.subplots(figsize=(16, 9), constrained_layout=True)
 
 export_data = total_eu_export_import['export_thousand_euros']
 import_data = total_eu_export_import['import_thousand_euros']

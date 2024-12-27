@@ -16,20 +16,21 @@ print(len(eu_export_2021))
 # Define a colormap
 cmap = plt.get_cmap("plasma", 2)
 
-fig, ax = plt.subplots(figsize=(16, 9))
+fig, ax = plt.subplots(figsize=(16, 9), constrained_layout=True)
 bars = ax.barh(eu_export_2021['material_label'], eu_export_2021['tonne'], color = cmap(0), edgecolor = 'black', capsize=7, label=eu_export_2021['tonne'])
 
-ax.set_title('Total export of the European Union in 2021 by materials, Billions tonnes')
+ax.set_title('Total export of the European Union in 2021 by materials, Millions tonnes')
 ax.invert_yaxis()
 
 # Add values near the bars
 for bar, value in zip(bars, eu_export_2021['tonne']):
     ax.text(value + 100000, bar.get_y() + bar.get_height()/2,
-            f'{value / 1e6:.1f}B', va='center', fontsize=10, color='black')
+            f'{value / 1e6:.3f} M', va='center', fontsize=10, color='black')
 
+ax.set_xlim(0, max(eu_export_2021['tonne']) * 1.1)
 ax.xaxis.set_visible(False)
 
-plt.savefig('..//assets//eu_export_2021_by_materials.png', dpi=300)
+# plt.savefig('..//assets//eu_export_2021_by_materials.png', dpi=300)
 plt.show()
 
 
