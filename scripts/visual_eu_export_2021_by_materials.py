@@ -30,7 +30,7 @@ for bar, value in zip(bars, eu_export_2021['tonne']):
 ax.set_xlim(0, max(eu_export_2021['tonne']) * 1.1)
 ax.xaxis.set_visible(False)
 
-# plt.savefig('..//assets//eu_export_2021_by_materials.png', dpi=300)
+plt.savefig('..//assets//eu_export_2021_by_materials.png', dpi=300)
 plt.show()
 
 
