@@ -131,7 +131,7 @@ In 2021, metal waste accounted for an impressive 65.51% of the total weight of t
 
 **SQL Query:** [view_eu_export_by_years_materials.sql](scripts/view_eu_export_by_years_materials.sql)
 
-**Python visualization:** [visual_eu_export_by_years_materials.py](scripts/visual_eu_export_by_years_materials.py)
+**Python visualization:** [visual_eu_export_2021_by_materials.py](scripts/visual_eu_export_2021_by_materials.py)
 
 <br><br>
 
