@@ -115,17 +115,17 @@ From 2004 to 2021, the European Union experienced significant changes in its was
 </p>
 
 Waste materials are grouped according to the following classification:
-- Plastics - waste, parings and scrap, of polymers of ethylene, styrene, chloride, propylene, acrylic polymers;
-- Rubber - waste, parings and scrap of soft rubber and powders and granules obtained therefrom, used pneumatic tyres of rubber;
+- Metals - waste and scrap of cast steel, copper, aliminium, nickel, precious metals(gold, silver, platinum) and others;
 - Paper and cardboard - waste and scrap of paper or paperboard, old and unsold newspapers and magazines, telephone directories, brochures and printed
 advertising material;
-- Glass - cullet and other waste and scrap of glass;
-- Textiles - cotton, flax, silk waste, waste of wool or of fine animal hair, nylon, acrylic, polyesters
-- Organic - animal and vegetal origin;
-- Wood - wood waste and scrap, whether or not agglomerated in logs, briquettes, pellets or similar forms;
-- Metals - waste and scrap of cast steel, copper, aliminium, nickel, precious metals(gold, silver, platinum) and others;
+- Textiles - cotton, flax, silk waste, waste of wool or of fine animal hair, nylon, acrylic, polyesters;
 - Minerals - slag, dross, scalings and other waste from the manufacture of iron or steel suitable for the recovery of iron or manganese or containing zinc, copper, aliminium, nickel, titanium;
-- Not specified - waste pharmaceuticals, municipal waste, residual products of the chemical or allied industries.
+- Plastics - waste, parings and scrap, of polymers of ethylene, styrene, chloride, propylene, acrylic polymers;
+- Rubber - waste, parings and scrap of soft rubber and powders and granules obtained therefrom, used pneumatic tyres of rubber;
+- Wood - wood waste and scrap, whether or not agglomerated in logs, briquettes, pellets or similar forms;
+- Not specified - waste pharmaceuticals, municipal waste, residual products of the chemical or allied industries;
+- Organic - animal and vegetal origin;
+- Glass - cullet and other waste and scrap of glass.
   
 In 2021, metal waste accounted for an impressive 65.51% of the total weight of the European Union's waste exports.
 
@@ -137,7 +137,7 @@ In 2021, metal waste accounted for an impressive 65.51% of the total weight of t
 
 ### 3. Top 10 waste export non-EU partners of the EU 
 
-[Flourish bar chat race](https://public.flourish.studio/resources/embed.js)
+[Flourish bar chat race](https://public.flourish.studio/visualisation/20578175/)
 <img src="https://public.flourish.studio/visualisation/20578175/thumbnail" alt="bar-chart-race visualization" width="70%" align="right"  style="margin-left: 0px;"/>
 
 From 2004 to 2021, the dynamics of the European Union’s waste trade with non-EU partners experienced notable shifts:
