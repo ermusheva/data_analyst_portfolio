@@ -50,20 +50,23 @@ The project workflow involves cleaning the data with Python, organizing it into 
 - Execute scripts to compute key metrics:
   - `view_eu_export_import_by_years.sql`
   - `view_eu_export_by_years_materials.sql`
-  - `proc_top_n_export_partners_of_country_by_years.sql`
+  - `proc_top_n_sum_export_partners_of_country_by_years.sql`
+  - `proc_top_n_export_partners_of_country_by_years.sql` (for visualization in Flourish)
 
 
 ### 7. **Export Data**
 - Export data to csv-files with the help of MySQL Workbench and place them in \results folder.
   - `eu_export_import_by_years.csv`
   - `eu_export_by_years_materials.csv`
-  - `top_10_export_partners_by_years.csv`
+  - `top_10_sum_export_partners_EU_by_years.csv`
+  - `top_10_export_partners_by_years.csv` (for visualization in Flourish)
 
 ### 8. **Visualize Data in Python**
 - Execute Python scripts to visualize data and save results:
   - `visual_eu_export_import_by_years.py`
   - `visual_eu_export_by_years_materials.py`
-  - `pivot_top_10_export_partners_by_years.py`
+  - `visual_top_n_sum_export_partners_of_country_by_years.py`
+  - `pivot_top_10_export_partners_by_years.py` (for visualization in Flourish)
     
 ### 9. **Visualize in Flourish**
 - Add to data `eu_top_10_export_partners.csv` image urls of country flags from Flourich with the help of Google Sheets.
@@ -111,10 +114,13 @@ From 2004 to 2021, the European Union experienced significant changes in its was
 ### 2. Export waste materials of the EU 
 
 <p align="right">
-  <img src="assets/eu_export_2021_by_materials.png" alt="Waste Trade" width="70%" align="right"  style="margin-left: 0px;">
+  <img src="assets/eu_export_2021_by_materials.png" alt="Waste Trade Materials" width="70%" align="right"  style="margin-left: 0px;">
 </p>
 
-Waste materials are grouped according to the following classification:
+Waste materials are grouped according to the following classification
+<details>
+  <summary>Waste materials classification</summary>
+  
 - Metals - waste and scrap of cast steel, copper, aliminium, nickel, precious metals(gold, silver, platinum) and others;
 - Paper and cardboard - waste and scrap of paper or paperboard, old and unsold newspapers and magazines, telephone directories, brochures and printed
 advertising material;
@@ -126,6 +132,8 @@ advertising material;
 - Not specified - waste pharmaceuticals, municipal waste, residual products of the chemical or allied industries;
 - Organic - animal and vegetal origin;
 - Glass - cullet and other waste and scrap of glass.
+
+</details>
   
 In 2021, metal waste accounted for an impressive 65.51% of the total weight of the European Union's waste exports.
 
@@ -137,8 +145,9 @@ In 2021, metal waste accounted for an impressive 65.51% of the total weight of t
 
 ### 3. Top 10 waste export non-EU partners of the EU 
 
-[Flourish bar chat race](https://public.flourish.studio/visualisation/20578175/)
-<img src="https://public.flourish.studio/visualisation/20578175/thumbnail" alt="bar-chart-race visualization" width="70%" align="right"  style="margin-left: 0px;"/>
+<p align="right">
+  <img src="assets/top_10_sum_export_partners_EU_by_years.png" alt="Waste trade partners of the EU" width="70%" align="right"  style="margin-left: 0px;">
+</p>
 
 From 2004 to 2021, the dynamics of the European Union’s waste trade with non-EU partners experienced notable shifts:
 
@@ -154,7 +163,11 @@ Over the 17 years, the USA consistently remained one of the most valuable non-EU
 - **Top Non-EU European Partners:**
 Among non-EU European countries, the United Kingdom, Switzerland, and Norway have been the EU's primary waste trade partners, maintaining strong trade relationships throughout the period.
 
-**SQL Query:** [proc_top_n_export_partners_of_country_by_years.sql](scripts/proc_top_n_export_partners_of_country_by_years.sql)
+[Flourish bar chat race](https://public.flourish.studio/visualisation/20578175/)
+
+**SQL Query:** [proc_top_n_sum_export_partners_of_country_by_years.sql](scripts/proc_top_n_sum_export_partners_of_country_by_years.sql)
+
+**Python visualization:** [visual_top_n_sum_export_partners_of_country_by_years.py](scripts/visual_top_n_sum_export_partners_of_country_by_years.py)
 
 <br><br>
 
