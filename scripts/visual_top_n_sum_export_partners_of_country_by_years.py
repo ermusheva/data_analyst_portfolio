@@ -29,7 +29,7 @@ for i in range(0, num_partners):
     partner_data = top_n_eu_export[(top_n_eu_export.loc[:, 'partner_label'] == partner)]
     years = partner_data['time_period']
     axs[i % num_axs_y, i // num_axs_y].plot(years, partner_data['thousand_euros'], color=cmap(0))
-    axs[i % num_axs_y, i // num_axs_y].set_title(partner, loc="left", fontfamily='sans-serif')
+    axs[i % num_axs_y, i // num_axs_y].set_title(partner, loc="left", fontfamily='sans-serif', fontsize=14)
     plt.xticks(years[1:len(years):2], fontfamily='sans-serif')
     axs[i % num_axs_y, i // num_axs_y].yaxis.set_major_formatter(FuncFormatter(to_billions))
 
